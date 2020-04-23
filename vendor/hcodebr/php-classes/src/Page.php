@@ -6,9 +6,9 @@ use Rain\Tpl;
 
 class Page{
 
-	private $tpl;
-	private $options=[];
-	private $defaults= [
+	protected $tpl;
+	protected $options=[];
+	protected $defaults= [
 		"data"=>[]
 	];
 
@@ -32,7 +32,7 @@ class Page{
 
 	}
 
-	private function setData($data= array()){
+	protected function setData($data= array()){
 			foreach ($data as $key => $value) {
 				$this->tpl->assign($key,$value);
 			}
